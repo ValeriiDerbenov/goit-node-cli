@@ -1,4 +1,5 @@
-import { program } from "commander";
+// import { program } from "commander";
+const { program } = require("commander");
 
 program
   .option("-a, --action <type>", "choose action")
@@ -12,27 +13,27 @@ program.parse();
 const options = program.opts();
 
 // TODO: рефакторити
-async function invokeAction({ action, id, name, email, phone }) {
-  switch (action) {
-    case "list":
-      // ...
-      break;
+// async function invokeAction({ action, id, name, email, phone }) {
+//   switch (action) {
+//     case "list":
+//       // ...
+//       break;
 
-    case "get":
-      // ... id
-      break;
+//     case "get":
+//       // ... id
+//       break;
 
-    case "add":
-      // ... name email phone
-      break;
+//     case "add":
+//       // ... name email phone
+//       break;
 
-    case "remove":
-      // ... id
-      break;
+//     case "remove":
+//       // ... id
+//       break;
 
-    default:
-      console.warn("\x1B[31m Unknown action type!");
-  }
-}
+//     default:
+//       console.warn("\x1B[31m Unknown action type!");
+//   }
+// }
 
-invokeAction(options);
+// invokeAction(options);
