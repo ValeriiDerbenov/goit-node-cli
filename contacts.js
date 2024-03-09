@@ -3,13 +3,12 @@ import path from "path";
 import { nanoid } from "nanoid";
 
 const contactsPath = path.resolve("db", "contacts.json");
-console.log(contactsPath);
 
 const updateListContacts = (contacts) =>
   fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
 
 export async function listContacts() {
-  const contacts = await fs.readFile(contactsPath, "utf-8");
+  const contacts = await fs.readFile(contactsPath);
   return JSON.parse(contacts);
 }
 
