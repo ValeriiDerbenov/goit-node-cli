@@ -12,12 +12,6 @@
     "phone": "(542) 451-7038"
   },
   {
-    "id": "vza2RIzNGIwutCVCs4mCL",
-    "name": "Wylie Pope",
-    "email": "est@utquamvel.net",
-    "phone": "(692) 802-2949"
-  },
-  {
     "id": "05olLMgyVQdWRwgKfg5J6",
     "name": "Cyrus Jackson",
     "email": "nibh@semsempererat.com",
@@ -58,5 +52,11 @@
     "name": "Valerii Derbenov",
     "email": "vd.alternative@gmail.com",
     "phone": "(380)983804380"
+  },
+  {
+    "id": "WRpfeFj1CJvbOKtKWoV45",
+    "name": "Mango",
+    "email": "mango@gmail.com",
+    "phone": "322-22-22"
   }
 ]
