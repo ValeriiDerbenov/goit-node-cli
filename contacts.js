@@ -18,21 +18,26 @@ export async function getContactById(contactId) {
   return contactById || null;
 }
 
-export async function removeContact(contactId) {
+export async function removeContact(id) {
   const contacts = await listContacts();
-  const index = contacts.findIndex((contact) => contact.id === contactId);
-  if (index === -1) {
-    return null;
-  }
-  const [removeContact] = contacts.splice(index, 1);
-  await fs.writeFile(contactsPath, updateListContacts, "utf-8");
-  return removeContact;
+  const index = contacts.findIndex((contact) => contact.id === id);
+  if (index === -1) return null;
+  const res = contacts.splice(index, 1);
+
+  await updateListContacts(contacts);
+  return res;
 }
 
 export async function addContact(name, email, phone) {
   const contacts = await listContacts();
-  const newContact = { id: nanoid(), name, email, phone };
-  contacts.push(newContact);
-  await fs.writeFile(contactsPath, updateListContacts, "utf-8");
-  return newContact;
+  const newContacts = {
+    id: nanoid(),
+    name,
+    email,
+    phone,
+  };
+  contacts.push(newContacts);
+  await updateListContacts(contacts);
+
+  return newContacts;
 }
